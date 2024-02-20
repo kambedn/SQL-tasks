@@ -91,3 +91,38 @@ SELECT TRIM('    text  '); -- trimming leading and trailing spaces
 SELECT TRIM(LEADING 'x' FROM 'xxxbarxxx'); -- trimming leading 'x'
 SELECT TRIM(BOTH 'x' FROM 'xxxbarxxx'); -- trimming both leading and trailing 'x'
 SELECT TRIM(TRAILING 'xyz' FROM 'barxxyz'); -- trimming trailing 'xyz'
+
+-- Reverse and Uppercase the sentence
+-- Why does my cat look at me with such hatred?
+SELECT REVERSE(UCASE('Why does my cat look at me with such hatred?'));
+
+-- Replace spaces in titles with '->'
+SELECT REPLACE(title, ' ', '->') AS title
+FROM books;
+
+-- Select lasts name of the authors and the backwards of them
+SELECT author_lname AS forwards, REVERSE(author_lname) AS backwards
+FROM books;
+
+-- Select authors' full names in uppercase
+SELECT UCASE(CONCAT_WS(' ', author_fname, author_lname)) AS full_name_in_caps
+FROM books;
+
+-- title + was released in + year of publication
+SELECT CONCAT_WS(' ', title, 'was released in', released_year) AS blurb
+FROM books;
+
+-- Print book titles and the length of each title
+SELECT title, CHAR_LENGTH(title) AS character_count
+FROM books;
+
+-- Print 
+-- short title (10 characters of the title + '...'
+-- author as: <last_name>,<first_name>
+-- quantity: <quantity> in stock
+SELECT 
+    CONCAT(LEFT(title, 10), '...') AS short_title,
+    CONCAT_WS(',', author_lname, author_fname) AS author,
+    CONCAT(stock_quantity, ' in stock') AS quantity
+FROM
+    books;
