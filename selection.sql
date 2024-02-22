@@ -105,6 +105,12 @@ FROM books
 ORDER BY author_lname, title;
 
 -- print 'MY FAVOURITE AUTHOR IS {author full name}' for each author, sorted alphabetically by last name
-SELECT UCASE(CONCAT('MY FAVOURITE AUTHOR IS ', author_fname, ' ', author_lname,'!')) AS yell
-FROM books
+SELECT 
+    UCASE(CONCAT('MY FAVOURITE AUTHOR IS ',
+                    author_fname,
+                    ' ',
+                    author_lname,
+                    '!')) AS yell
+FROM
+    books
 ORDER BY author_lname;
