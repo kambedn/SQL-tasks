@@ -112,7 +112,7 @@ SELECT * FROM orders
 JOIN customers
 	ON customers.id = orders.customer_id;
 
--- Find the total amount each customer spend
+-- Find the total amount each customer spent
 SELECT first_name, last_name, SUM(amount) AS total_spent
 FROM customers
 JOIN orders
