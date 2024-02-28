@@ -107,7 +107,7 @@ SHOW WARNINGS; -- no warning now
 -- Strict mode controls how MySQL handles invalid or missing values in data-change statements
 -- such as INSERT or UPDATE
 -- If we disable strict mode, then when we try to insert a string to a numeric column
--- we get only a warning and 0 is set as the value
+-- we will get only a warning and 0 is set as the value
 
 -- ONLY_FULL_GROUP_BY
 -- it allows to only select columns that are used in GROUP BY statement
