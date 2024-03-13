@@ -1,7 +1,7 @@
-## SQL Examples, Exercises, and Notes
+# SQL Examples, Exercises, and Notes
 This repository contains SQL files with examples, exercises, and notes on various subjects related to SQL database management. Each SQL file covers a specific topic and provides a practical guide along with sample queries and explanations.
 
-# Table of Contents
+## Table of Contents
 CRUD.sql: SQL queries demonstrating CRUD operations (Create, Read, Update, Delete).
 aggregate_functions.sql: Examples illustrating the usage of aggregate functions in SQL queries.
 books_table.sql: SQL script to create a sample table for storing book information and to insert some data used later in other files.
@@ -16,5 +16,5 @@ triggers.sql: SQL scripts demonstrating the usage of triggers for enforcing data
 views-modes.sql: SQL queries and explanations related to views and modes.
 window_functions.sql: Examples showcasing the usage of window functions in SQL queries.
 
-# Usage
+## Usage
 Each SQL file contains SQL queries and explanations related to the respective topic. You can use these files for learning SQL concepts, practicing SQL queries, or as a reference guide when working on SQL databases.
